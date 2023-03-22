@@ -35,7 +35,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`enemy 2`, function (sprite, l
     game.gameOver(false)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile14`, function (sprite, location) {
-    info.changeScoreBy(25)
+    info.changeScoreBy(15)
     tiles.setTileAt(location, assets.tile`transparency16`)
 })
 let mySprite: Sprite = null
