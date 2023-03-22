@@ -23,8 +23,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, l
     music.play(music.melodyPlayable(music.zapped), music.PlaybackMode.UntilDone)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, location) {
-    game.gameOver(true)
-    game.setGameOverEffect(true, effects.starField)
+    scene.setBackgroundImage(assets.image`myImage10`)
+    tiles.setCurrentTilemap(tilemap`level7`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`enemy 2`, function (sprite, location) {
     game.gameOver(false)
