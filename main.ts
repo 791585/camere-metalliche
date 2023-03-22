@@ -11,6 +11,11 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile13`, function (sprite, location) {
     game.gameOver(false)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile25`, function (sprite, location) {
+    game.gameOver(false)
+    game.setGameOverMessage(false, "error")
+    game.setGameOverEffect(false, effects.splatter)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile12`, function (sprite, location) {
     scene.setBackgroundImage(assets.image`background 2`)
     tiles.setCurrentTilemap(tilemap`level5`)
