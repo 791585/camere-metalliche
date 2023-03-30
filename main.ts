@@ -13,10 +13,6 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         mySprite.vy += -200
     }
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile32`, function (sprite, location) {
-    game.gameOver(true)
-    game.setGameOverEffect(true, effects.hearts)
-})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile13`, function (sprite, location) {
     game.gameOver(false)
     game.setGameOverMessage(false, "error")
@@ -49,6 +45,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`enemy 2`, function (sprite, l
     game.gameOver(false)
     game.setGameOverEffect(false, effects.splatter)
     game.setGameOverMessage(false, "error")
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile40`, function (sprite, location) {
+    game.gameOver(true)
+    game.setGameOverEffect(true, effects.hearts)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile14`, function (sprite, location) {
     info.changeScoreBy(10)
